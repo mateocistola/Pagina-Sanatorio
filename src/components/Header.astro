@@ -1,0 +1,113 @@
+---
+// 1. Asegurate de importar el componente Image al inicio de tu archivo de Header
+import { Image } from 'astro:assets';
+---
+
+<header class="sticky top-0 z-50 backdrop-blur-xl bg-white/85 border-b border-gray-200/80">
+
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+
+    <a href="/" class="flex items-center gap-4 group">
+      <Image
+        src="/logo.png"
+        alt="Logo Sanatorio San José"
+        width={48} 
+        height={48}
+        loading="eager"
+        decoding="async"
+        class="h-12 w-auto transition-transform duration-500 group-hover:rotate-[10deg]"
+      />
+      <div>
+        <h1 class="font-bold text-lg leading-tight text-gray-900">
+          Sanatorio San José
+        </h1>
+        <p class="text-sm text-gray-500">
+          Villa Elisa
+        </p>
+      </div>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+      <a href="/" class="relative py-2 text-gray-700 hover:text-blue-700 transition-colors duration-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0.5 before:bg-blue-700 before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-300">
+        Inicio
+      </a>
+      <a href="/staff" class="relative py-2 text-gray-700 hover:text-blue-700 transition-colors duration-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0.5 before:bg-blue-700 before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-300">
+        Staff
+      </a>
+      <a href="/internacion" class="relative py-2 text-gray-700 hover:text-blue-700 transition-colors duration-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0.5 before:bg-blue-700 before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-300">
+        Internación
+      </a>
+      <a href="/contacto" class="relative py-2 text-gray-700 hover:text-blue-700 transition-colors duration-300 before:content-[''] before:absolute before:bottom-0 before:left-0 before:w-full before:h-0.5 before:bg-blue-700 before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-300">
+        Contacto
+      </a>
+    </nav>
+
+    <button
+      id="mobileMenuButton"
+      class="md:hidden flex flex-col justify-center items-center w-9 h-9 gap-1.5 relative z-50 rounded-xl hover:bg-slate-100 transition-colors"
+      aria-label="Menu"
+    >
+      <span id="line1" class="w-5 h-0.5 bg-gray-900 transition-all duration-300 transform origin-center"></span>
+      <span id="line2" class="w-5 h-0.5 bg-gray-900 transition-all duration-300 transform"></span>
+      <span id="line3" class="w-5 h-0.5 bg-gray-900 transition-all duration-300 transform origin-center"></span>
+    </button>
+
+  </div>
+
+  <div
+    id="mobileMenu"
+    class="max-h-0 opacity-0 overflow-hidden md:hidden bg-white w-full transition-all duration-300 ease-in-out"
+  >
+    <nav class="flex flex-col p-5 gap-2 text-base font-semibold text-slate-800 border-t border-slate-100">
+      <a href="/" class="hover:text-blue-700 hover:bg-slate-50 px-4 py-3 rounded-xl transition-colors">
+        Inicio
+      </a>
+      <a href="/staff" class="hover:text-blue-700 hover:bg-slate-50 px-4 py-3 rounded-xl transition-colors">
+        Staff Médico
+      </a>
+      <a href="/internacion" class="hover:text-blue-700 hover:bg-slate-50 px-4 py-3 rounded-xl transition-colors">
+        Internación
+      </a>
+      <a href="/contacto" class="hover:text-blue-700 hover:bg-slate-50 px-4 py-3 rounded-xl transition-colors">
+        Contacto
+      </a>
+    </nav>
+  </div>
+
+</header>
+
+<script>
+  const initMenu = () => {
+    const button = document.getElementById('mobileMenuButton');
+    const menu = document.getElementById('mobileMenu');
+    
+    const line1 = document.getElementById('line1');
+    const line2 = document.getElementById('line2');
+    const line3 = document.getElementById('line3');
+
+    button?.addEventListener('click', () => {
+      if (menu) {
+        const isClosed = menu.classList.contains('max-h-0');
+
+        if (isClosed) {
+          menu.classList.remove('max-h-0', 'opacity-0');
+          menu.classList.add('max-h-64', 'opacity-100');
+
+          line1?.classList.add('translate-y-2', 'rotate-45');
+          line2?.classList.add('opacity-0', 'scale-0');
+          line3?.classList.add('-translate-y-2', '-rotate-45');
+        } else {
+          menu.classList.remove('max-h-64', 'opacity-100');
+          menu.classList.add('max-h-0', 'opacity-0');
+
+          line1?.classList.remove('translate-y-2', 'rotate-45');
+          line2?.classList.remove('opacity-0', 'scale-0');
+          line3?.classList.remove('-translate-y-2', '-rotate-45');
+        }
+      }
+    });
+  };
+
+  initMenu();
+  document.addEventListener('astro:page-load', initMenu);
+</script>

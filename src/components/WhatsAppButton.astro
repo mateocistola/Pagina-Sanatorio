@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+---
+
+<a
+  href="https://wa.me/5492215453531"
+  target="_blank"
+  aria-label="Contactar por WhatsApp"
+  class="fixed z-50 text-white w-16 h-16 rounded-full shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 group"
+  style="bottom: 24px; right: 24px; background-color: #25D366; position: fixed !important;"
+>
+  <span 
+    class="absolute inset-0 rounded-full animate-ping pointer-events-none group-hover:animate-none"
+    style="background-color: #25D366; opacity: 0.4;"
+  ></span>
+
+  <!-- Hacemos referencia directa al archivo en la carpeta public usando un string -->
+  <Image 
+    src="/WhatsApp.svg" 
+    alt="WhatsApp" 
+    width={36} 
+    height={36}
+    loading="lazy"
+    decoding="async"
+    class="w-9 h-9 transition-transform duration-300 group-hover:rotate-[8deg] pointer-events-none"
+  />
+</a>

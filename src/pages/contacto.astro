@@ -1,0 +1,96 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contacto - Sanatorio San José">
+
+  <section class="bg-slate-900 text-white py-20 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.1),transparent_50%)]"></div>
+    <div class="max-w-6xl mx-auto relative z-10">
+      <span class="inline-block bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
+        Atención al usuario
+      </span>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+        Canales de Contacto
+      </h1>
+      <p class="text-lg text-slate-300 max-w-2xl leading-relaxed">
+        Estamos disponibles para resolver todas tus consultas administrativas, solicitudes de turnos y requerimientos médicos.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20 bg-slate-50">
+    <div class="max-w-6xl mx-auto px-6">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start" data-aos="fade-up">
+        
+        <div class="bg-white rounded-3xl p-8 md:p-10 border border-slate-200/80 shadow-sm flex flex-col justify-between min-h-[480px]">
+          
+          <div class="space-y-8">
+            <div class="flex gap-4">
+              <div class="text-2xl w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center shrink-0">📍</div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-lg mb-1">
+                  Dirección
+                </h3>
+                <p class="text-slate-600 leading-relaxed text-sm md:text-base">
+                  Calle 55 N° 801 entre 8 y 9, Villa Elisa, La Plata
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-2xl w-8 h-8 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center shrink-0">📞</div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-lg mb-1.5">
+                  Central Telefónica
+                </h3>
+                <div class="space-y-1">
+                  <a href="tel:02214730266" class="block text-blue-700 font-semibold hover:underline text-sm md:text-base">
+                    (0221) 473-0266
+                  </a>
+                  <a href="tel:02214733433" class="block text-blue-700 font-semibold hover:underline text-sm md:text-base">
+                    (0221) 473-3433
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="text-2xl w-8 h-8 rounded-lg bg-slate-100 flex items-center justify-center shrink-0">✉️</div>
+              <div>
+                <h3 class="font-bold text-slate-900 text-lg mb-1">
+                  Correo electrónico
+                </h3>
+                <a href="mailto:info@sanjoseve.com.ar" class="text-slate-600 hover:text-blue-700 font-medium transition-colors text-sm md:text-base break-all">
+                  info@sanjoseve.com.ar
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-8 mt-6 border-t border-slate-100">
+            <a
+              href="https://wa.me/5492215453531"
+              target="_blank"
+              class="inline-flex w-full sm:w-auto justify-center items-center gap-2 bg-gradient-to-r from-emerald-600 to-teal-600 text-white px-6 py-4 rounded-xl font-bold shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+            >
+              <span>💬</span> Contactar por WhatsApp
+            </a>
+          </div>
+
+        </div>
+        <div class="w-full relative overflow-hidden rounded-3xl border border-slate-200/80 shadow-sm group">
+        <iframe
+          src="https://www.google.com/maps?q=Sanatorio+San+Jose+Villa+Elisa+S.A.&output=embed"
+          class="w-full h-[450px] rounded-2xl border-0 shadow-lg"
+          loading="lazy"
+        ></iframe>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</Layout>

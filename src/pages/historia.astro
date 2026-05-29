@@ -1,0 +1,99 @@
+---
+import Layout from '../layouts/Layout.astro';
+import * as ContenidoHistoria from '../data/contenido-historia.md';
+
+const { Content, frontmatter } = ContenidoHistoria;
+---
+
+<Layout title="Quiénes Somos - Sanatorio San José">
+
+<!-- Hero Section Centrado con Margen Correcto -->
+  <section class="bg-slate-900 text-white py-16 px-6 relative overflow-hidden text-center">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.1),transparent_50%)]"></div>
+    
+    <div class="max-w-4xl mx-auto relative z-10 flex flex-col items-center justify-center">
+      
+      <span class="inline-block bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
+        Institucional
+      </span>
+      
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-3 max-w-2xl">
+        {frontmatter.title}
+      </h1>
+      
+      <p class="text-base md:text-lg text-slate-300 leading-relaxed max-w-2xl mx-auto">
+        {frontmatter.subtitle}
+      </p>
+      
+    </div>
+  </section>
+
+  <!-- Contenedor de Cajas Apiladas -->
+  <section class="bg-slate-50 py-12 px-6">
+    <div class="max-w-4xl mx-auto space-y-8" data-aos="fade-up">
+      
+      <!-- CAJA 1: Reseña Histórica Completa -->
+      <div class="bg-white rounded-3xl p-8 md:p-10 border border-slate-200/80 shadow-sm">
+        <article class="prose prose-slate max-w-none 
+          prose-h2:text-2xl prose-h2:font-extrabold prose-h2:text-slate-900 prose-h2:tracking-tight prose-h2:mb-6 prose-h2:border-b prose-h2:border-slate-100 prose-h2:pb-3
+          prose-p:text-slate-650 prose-p:text-base md:prose-p:text-lg prose-p:leading-relaxed prose-p:mb-6 prose-strong:text-slate-900">
+          <Content />
+        </article>
+      </div>
+
+      <!-- CAJA 2: Misión y Visión (Lado a lado dentro de su propia caja horizontal) -->
+      <div class="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 split-border">
+          
+          <!-- Misión -->
+          <div class="space-y-3">
+            <h3 class="font-extrabold text-slate-900 text-xl mb-2 flex items-center gap-2">
+              <span>🎯</span> Nuestra Misión
+            </h3>
+            <p class="text-slate-600 text-base leading-relaxed">
+              {frontmatter.mision}
+            </p>
+          </div>
+
+          <!-- Visión -->
+          <div class="space-y-3 border-t border-slate-100 pt-6 md:border-t-0 md:pt-0 md:border-l md:pl-8">
+            <h3 class="font-extrabold text-slate-900 text-xl mb-2 flex items-center gap-2">
+              <span>👁️</span> Nuestra Visión
+            </h3>
+            <p class="text-slate-600 text-base leading-relaxed">
+              {frontmatter.vision}
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CAJA 3: Nuestros Valores -->
+      <div class="bg-white rounded-3xl p-8 border border-slate-200/80 shadow-sm">
+        <div class="mb-6 border-b border-slate-100 pb-3">
+          <h3 class="font-extrabold text-slate-900 text-xl tracking-tight">
+            Nuestros Valores
+          </h3>
+        </div>
+        
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
+          {frontmatter.valores.map((valor) => (
+            <div class="flex items-start gap-3">
+              <span class="w-2 h-2 rounded-full bg-blue-600 mt-2 shrink-0"></span>
+              <div>
+                <h4 class="font-bold text-slate-800 text-base md:text-lg mb-1">
+                  {valor.titulo}
+                </h4>
+                <p class="text-slate-500 text-sm leading-relaxed">
+                  {valor.descripcion}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</Layout>

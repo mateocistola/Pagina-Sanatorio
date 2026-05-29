@@ -1,0 +1,125 @@
+---
+import Layout from '../layouts/Layout.astro';
+import * as ContenidoTomografia from '../data/contenido-tomografia.md';
+
+const { Content, frontmatter } = ContenidoTomografia;
+---
+
+<Layout title={`${frontmatter.title} - Sanatorio San José`}>
+
+  <section class="bg-slate-900 text-white py-20 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.1),transparent_50%)]"></div>
+    <div class="max-w-6xl mx-auto relative z-10">
+      <span class="inline-block bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
+        Servicios de Diagnóstico
+      </span>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+        {frontmatter.title}
+      </h1>
+      <p class="text-lg text-slate-300 max-w-2xl leading-relaxed">
+        {frontmatter.subtitle}
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-slate-50 py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+        
+        <div class="lg:col-span-2 space-y-12">
+          
+          <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+            <article class="prose prose-slate max-w-none 
+              prose-p:text-slate-600 prose-p:text-base md:prose-p:text-lg prose-p:leading-relaxed prose-strong:text-slate-900">
+              <Content />
+            </article>
+          </div>
+
+          <div class="group/section">
+            
+            <div class="mb-8 flex items-center justify-between border-b border-slate-200 pb-4">
+              <div>
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 group-hover/section:text-blue-900 transition-colors duration-300">
+                  Estudios y Prácticas
+                </h2>
+                <p class="text-sm text-slate-500 mt-1">
+                  Equipamiento de última tecnología médica incorporado
+                </p>
+              </div>
+              <div class="w-16 h-1 bg-blue-600 rounded-full group-hover/section:w-28 transition-all duration-500 ease-out"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 pl-2">
+              {frontmatter.estudios.map((estudio) => (
+                <div class="flex items-center gap-3 py-1.5 border-b border-slate-200/40 sm:border-b-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 text-blue-600 shrink-0">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span class="text-slate-700 font-medium text-base md:text-lg tracking-tight">
+                    {estudio}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+          </div>
+
+          <div class="bg-blue-50/50 border border-blue-100 rounded-2xl p-6 md:p-8">
+            <h3 class="text-xl font-bold text-blue-950 mb-3 flex items-center gap-2">
+              ✨ Beneficios de nuestro Resonador Abierto
+            </h3>
+            <p class="text-slate-700 text-base md:text-lg leading-relaxed">
+              {frontmatter.beneficios_resonador}
+            </p>
+          </div>
+
+        </div>
+
+        <div class="space-y-6">
+          
+          <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+            <div class="mb-6 pb-4 border-b border-slate-100">
+              <h3 class="text-lg font-bold text-slate-900 tracking-tight">Solicitud de Turnos</h3>
+              <p class="text-slate-500 text-xs mt-0.5">Comunicate directamente con el área de imágenes</p>
+            </div>
+            
+            <div class="space-y-6">
+              <div class="flex flex-col gap-1">
+                <span class="text-[11px] font-bold text-slate-400 uppercase tracking-wider">Llamar por Teléfono</span>
+                <a 
+                  href={`tel:${frontmatter.contacto.telefono.replace(/\s+/g, '')}`} 
+                  class="text-blue-700 font-bold text-lg hover:underline"
+                >
+                  📞 {frontmatter.contacto.telefono}
+                </a>
+              </div>
+
+              <div class="flex flex-col gap-1 pt-4 border-t border-slate-100">
+                <span class="text-[11px] font-bold text-emerald-600 uppercase tracking-wider">Mensaje de WhatsApp</span>
+                <a 
+                  href={frontmatter.contacto.whatsapp_link}
+                  target="_blank" 
+                  class="inline-flex items-center gap-1.5 text-emerald-600 font-bold hover:text-emerald-700 transition-colors text-lg"
+                >
+                  💬 {frontmatter.contacto.whatsapp}
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-slate-100/60 rounded-2xl p-5 border border-slate-200/40">
+            <h4 class="text-xs font-bold text-slate-700 uppercase tracking-wide mb-1.5">Indicaciones Previas</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Al momento de agendar su turno, consulte a nuestro personal administrativo si su estudio requiere preparación previa de ayuno, orden física firmada o estudios anteriores.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</Layout>

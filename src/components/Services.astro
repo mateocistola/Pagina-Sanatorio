@@ -1,0 +1,163 @@
+---
+import {
+  Stethoscope,
+  Microscope,
+  Ambulance,
+  BedDouble,
+  Activity,
+  ArrowRight,
+  HeartPulse
+} from 'lucide-astro';
+---
+
+<section class="py-24 bg-slate-50">
+
+  <div class="max-w-7xl mx-auto px-6">
+
+    <div class="mb-12 text-center">
+      <div class="inline-flex bg-blue-100 text-blue-700 px-4 py-1.5 rounded-full text-sm font-semibold uppercase tracking-wider mb-6">
+        Prestaciones
+      </div>
+
+      <h2 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">
+        Servicios médicos
+      </h2>
+
+      <p class="text-lg text-slate-500 max-w-2xl mx-auto leading-relaxed">
+        Conozca las principales especialidades, servicios de diagnóstico y atención permanente del sanatorio.
+      </p>
+    </div>
+
+    <div class="max-w-4xl mx-auto mb-16" data-aos="fade-up">
+      <a 
+        href="/staff" 
+        class="flex flex-col sm:flex-row items-center justify-between gap-6 bg-gradient-to-r from-blue-700 to-indigo-800 text-white p-6 md:p-8 rounded-3xl shadow-lg shadow-blue-900/10 hover:shadow-xl hover:shadow-blue-900/20 hover:-translate-y-0.5 transition-all duration-300 group relative overflow-hidden"
+      >
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,255,255,0.08),transparent_60%)] pointer-events-none"></div>
+
+        <div class="text-center sm:text-left space-y-2 relative z-10">
+          <h3 class="text-2xl font-bold tracking-tight flex items-center justify-center sm:justify-start gap-2">
+            👨‍⚕️ Cuerpo Profesional y Staff Médico
+          </h3>
+          <p class="text-blue-100/90 text-sm md:text-base max-w-xl leading-relaxed">
+            Consulte la nómina completa de nuestros profesionales, ordenados por área y especialidad médica.
+          </p>
+        </div>
+
+        <div class="shrink-0 bg-white/10 backdrop-blur-md border border-white/20 p-4 rounded-2xl group-hover:bg-white text-white group-hover:text-blue-800 transition-all duration-300 relative z-10">
+          <ArrowRight class="w-6 h-6 transition-transform duration-300 group-hover:translate-x-1" />
+        </div>
+      </a>
+    </div>
+
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8"
+      data-aos="fade-up"
+    >
+      <a
+        href="/laboratorio"
+        class="group border border-slate-200/80 rounded-3xl p-8 hover:border-blue-200 hover:shadow-xl transition-all duration-300 bg-white flex flex-col justify-between min-h-[250px]"
+      >
+        <div>
+          <div class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center mb-6 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+            <Microscope class="w-7 h-7" />
+          </div>
+          <h3 class="text-2xl font-bold text-slate-800 mb-3 group-hover:text-blue-700 transition-colors">
+            Laboratorio
+          </h3>
+          <p class="text-slate-500 text-sm md:text-base leading-relaxed">
+            Análisis clínicos bioquímicos y alta complejidad con control de calidad externo.
+          </p>
+        </div>
+      </a>
+
+      <a
+        href="/tomografia"
+        class="group border border-slate-200/80 rounded-3xl p-8 hover:border-blue-200 hover:shadow-xl transition-all duration-300 bg-white flex flex-col justify-between min-h-[250px]"
+      >
+        <div>
+          <div class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center mb-6 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+            <Stethoscope class="w-7 h-7" />
+          </div>
+          <h3 class="text-2xl font-bold text-slate-800 mb-3 group-hover:text-blue-700 transition-colors">
+            Diagnóstico por imágenes
+          </h3>
+          <p class="text-slate-500 text-sm md:text-base leading-relaxed">
+            Estudios radiológicos, tomografía computada e informes digitales inmediatos.
+          </p>
+        </div>
+      </a>
+
+      <a
+        href="#"
+        class="group border border-slate-200/80 rounded-3xl p-8 hover:border-blue-200 hover:shadow-xl transition-all duration-300 bg-white flex flex-col justify-between min-h-[250px]"
+      >
+        <div>
+          <div class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center mb-6 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+            <Ambulance class="w-7 h-7" />
+          </div>
+          <h3 class="text-2xl font-bold text-slate-800 mb-3 group-hover:text-blue-700 transition-colors">
+            Guardia 24 hs
+          </h3>
+          <p class="text-slate-500 text-sm md:text-base leading-relaxed">
+            Atención médica de urgencia permanente los 365 días del año.
+          </p>
+        </div>
+      </a>
+
+      <a
+        href="/internacion"
+        class="group border border-slate-200/80 rounded-3xl p-8 hover:border-blue-200 hover:shadow-xl transition-all duration-300 bg-white flex flex-col justify-between min-h-[250px]"
+      >
+        <div>
+          <div class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center mb-6 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+            <BedDouble class="w-7 h-7" />
+          </div>
+          <h3 class="text-2xl font-bold text-slate-800 mb-3 group-hover:text-blue-700 transition-colors">
+            Internación
+          </h3>
+          <p class="text-slate-500 text-sm md:text-base leading-relaxed">
+            Gestión de ingresos programados o de urgencia con atención médica integral.
+          </p>
+        </div>
+      </a>
+
+      <a
+        href="/gastroenterologia"
+        class="group border border-slate-200/80 rounded-3xl p-8 hover:border-blue-200 hover:shadow-xl transition-all duration-300 bg-white flex flex-col justify-between min-h-[250px]"
+      >
+        <div>
+          <div class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center mb-6 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+            <Activity class="w-7 h-7" />
+          </div>
+          <h3 class="text-2xl font-bold text-slate-800 mb-3 group-hover:text-blue-700 transition-colors">
+            Gastroenterología
+          </h3>
+          <p class="text-slate-500 text-sm md:text-base leading-relaxed">
+            Diagnóstico, tratamiento y seguimiento de patologías del aparato digestivo.
+          </p>
+        </div>
+      </a>
+
+      <a
+        href="#"
+        class="group border border-slate-200/80 rounded-3xl p-8 hover:border-blue-200 hover:shadow-xl transition-all duration-300 bg-white flex flex-col justify-between min-h-[250px]"
+      >
+        <div>
+          <div class="w-14 h-14 rounded-2xl bg-blue-50 text-blue-700 flex items-center justify-center mb-6 group-hover:scale-105 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+            <HeartPulse class="w-7 h-7" />
+          </div>
+          <h3 class="text-2xl font-bold text-slate-800 mb-3 group-hover:text-blue-700 transition-colors">
+            Cirugía
+          </h3>
+          <p class="text-slate-500 text-sm md:text-base leading-relaxed">
+            Quirófanos equipados para intervenciones programadas y de urgencia con soporte postoperatorio.
+          </p>
+        </div>
+      </a>
+
+    </div>
+
+  </div>
+
+</section>

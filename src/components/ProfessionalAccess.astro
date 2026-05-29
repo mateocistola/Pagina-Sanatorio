@@ -1,0 +1,54 @@
+---
+// 1. Asegurate de tener importado el componente de Astro en el frontmatter de tu archivo:
+import { Image } from 'astro:assets';
+---
+
+<section class="relative py-32 overflow-hidden">
+
+  <Image
+    src="/medical-bg.jpg"
+    alt="Fondo institucional médico"
+    width={1920}
+    height={1080}
+    loading="lazy"
+    decoding="async"
+    class="absolute inset-0 w-full h-full object-cover"
+  />
+
+  <div class="absolute inset-0 bg-blue-950/60"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6">
+
+    <div
+      class="max-w-2xl mx-auto bg-white/95 backdrop-blur-xl rounded-[2rem] p-12 shadow-2xl"
+      data-aos="zoom-in"
+    >
+
+      <div class="text-center mb-10">
+        <div class="inline-flex bg-blue-100 text-blue-700 px-4 py-2 rounded-full text-sm font-medium mb-6">
+          Profesionales
+        </div>
+
+        <h2 class="text-5xl font-bold tracking-tight mb-4">
+          Acceso médicos
+        </h2>
+      </div>
+
+      <div class="grid md:grid-cols-1 gap-5">
+        <a
+          href="http://sistemas.sanjoseve:8080/GestionClinicas"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="bg-blue-700 hover:bg-blue-800 text-white rounded-2xl p-6 text-center transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+        >
+          <div class="text-lg font-semibold mb-2">
+            SAPREM
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>

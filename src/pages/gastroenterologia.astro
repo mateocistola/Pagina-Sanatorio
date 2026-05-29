@@ -1,0 +1,113 @@
+---
+import Layout from '../layouts/Layout.astro';
+import * as ContenidoGastro from '../data/contenido-gastro.md';
+
+const { Content, frontmatter } = ContenidoGastro;
+---
+
+<Layout title={`${frontmatter.title} - Sanatorio San José`}>
+
+  <section class="bg-slate-900 text-white py-20 px-6 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.1),transparent_50%)]"></div>
+    <div class="max-w-6xl mx-auto relative z-10">
+      <span class="inline-block bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider mb-4">
+        Especialidades Médicas
+      </span>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
+        {frontmatter.title}
+      </h1>
+      <p class="text-lg text-slate-300 max-w-2xl leading-relaxed">
+        {frontmatter.subtitle}
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-slate-50 py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
+        
+        <div class="lg:col-span-2 space-y-12">
+          
+          <div class="bg-white rounded-2xl p-8 border border-slate-200 shadow-sm">
+            <p class="text-blue-700 font-bold text-base md:text-lg mb-4 border-l-4 border-blue-600 pl-4">
+              {frontmatter.especializacion}
+            </p>
+            
+            <article class="prose prose-slate max-w-none 
+              prose-p:text-slate-600 prose-p:text-base md:prose-p:text-lg prose-p:leading-relaxed">
+              <Content />
+            </article>
+          </div>
+
+          <div class="group/section">
+            
+            <div class="mb-8 flex items-center justify-between border-b border-slate-200 pb-4">
+              <div>
+                <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-slate-900 group-hover/section:text-blue-900 transition-colors duration-300">
+                  Prácticas y Prestaciones
+                </h2>
+                <p class="text-sm text-slate-500 mt-1">
+                  Endoscopía diagnóstica y terapéutica avanzada
+                </p>
+              </div>
+              <div class="w-16 h-1 bg-blue-600 rounded-full group-hover/section:w-28 transition-all duration-500 ease-out"></div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 pl-2">
+              {frontmatter.prestaciones.map((prestacion) => (
+                <div class="flex items-center gap-3 py-1.5 border-b border-slate-200/40 sm:border-b-0">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-4 h-4 text-blue-600 shrink-0">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                  </svg>
+                  <span class="text-slate-700 font-medium text-base md:text-lg tracking-tight">
+                    {prestacion}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="space-y-6">
+          
+          <div class="bg-gradient-to-br from-amber-600 to-orange-700 text-white rounded-2xl p-6 shadow-md border border-amber-500">
+            <div class="flex items-center gap-2.5 mb-3">
+              <span class="text-2xl">⚠️</span>
+              <h3 class="text-lg font-bold text-white tracking-tight">
+                Asignación de Turnos
+              </h3>
+            </div>
+            
+            <p class="text-sm font-bold text-amber-50 leading-relaxed mb-4 bg-black/10 p-3 rounded-xl border border-white/10">
+              📌 {frontmatter.turnos_alerta}
+            </p>
+            
+            <div class="text-xs text-amber-100/90 space-y-2.5 leading-relaxed">
+              <p>Al reservar tu fecha de forma presencial en recepción, el personal te hará entrega de:</p>
+              <ul class="space-y-1.5 pl-4 list-disc font-medium">
+                <li>Consentimiento informado requerido para la práctica.</li>
+                <li>Recetas para la compra de preparados médicos obligatorios.</li>
+                <li>Indicaciones previas de ayuno o preparación.</li>
+                <li>Órdenes médicas para la realización de estudios pre-quirúrgicos.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm">
+            <h4 class="text-sm font-bold text-slate-800 mb-1.5">¿Dónde presentarse?</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              Deberá acercarse a las ventanillas de recepción del Sanatorio en los horarios administrativos habituales para gestionar estas órdenes de manera directa.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+</Layout>

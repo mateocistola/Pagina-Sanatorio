@@ -1,0 +1,297 @@
+[
+  {
+    "especialidad": "Cardiología",
+    "profesionales": [
+      {
+        "nombre": "Dr. Nonnis Jorge",
+        "matricula": "MP 114112"
+      },
+      {
+        "nombre": "Dr. Pizzini Luis",
+        "matricula": "MP 19616"
+      }
+    ]
+  },
+  {
+    "especialidad": "Cirugía Cardiovascular",
+    "profesionales": [
+      {
+        "nombre": "Dr. Gomez Fernando",
+        "matricula": "MP 115288"
+      },
+      {
+        "nombre": "Dr. Serrano Alberto",
+        "matricula": "MP 111376"
+      }
+    ]
+  },
+  {
+    "especialidad": "Cirugía General",
+    "profesionales": [
+      {
+        "nombre": "Dr. Cingolani Dardo",
+        "matricula": "MP 115347"
+      },
+      {
+        "nombre": "Dr. De Simone Ricardo",
+        "matricula": "MP 16305"
+      },
+      {
+        "nombre": "Dr. Fabiano Diego",
+        "matricula": "MP 116551"
+      },
+      {
+        "nombre": "Dr. Jungleib Ezequiel",
+        "matricula": "MP 113952"
+      }
+    ]
+  },
+  {
+    "especialidad": "Cirugía Plástica",
+    "profesionales": [
+      {
+        "nombre": "Dr. De Juana Gaston",
+        "matricula": "MP 230502"
+      }
+    ]
+  },
+  {
+    "especialidad": "Clínica Médica",
+    "profesionales": [
+      {
+        "nombre": "Dr. Filipas Ruben",
+        "matricula": "MP 19123"
+      },
+      {
+        "nombre": "Dra. Tolomey Romina",
+        "matricula": "MP 114607"
+      }
+    ]
+  },
+  {
+    "especialidad": "Cuidados Paliativos",
+    "profesionales": [
+      {
+        "nombre": "Dr. Ramos Juan",
+        "matricula": "MP 116940"
+      }
+    ]
+  },
+  {
+    "especialidad": "Dermatología",
+    "profesionales": [
+      {
+        "nombre": "Dra. Scaduto Julieta",
+        "matricula": "MP 228656"
+      },
+      {
+        "nombre": "Dra. Tomatti Maria",
+        "matricula": "MP 110992"
+      }
+    ]
+  },
+  {
+    "especialidad": "Ecografía",
+    "profesionales": [
+      {
+        "nombre": "Dr. Pinedo Gaston",
+        "matricula": "MP 116577"
+      }
+    ]
+  },
+  {
+    "especialidad": "Gastroenterología y Nutrición",
+    "profesionales": [
+      {
+        "nombre": "Dra. Stabile Silvia",
+        "matricula": "MP 112639"
+      }
+    ]
+  },
+  {
+    "especialidad": "Ginecología",
+    "profesionales": [
+      {
+        "nombre": "Dra. Babolin Silvana",
+        "matricula": "MP 19122"
+      },
+      {
+        "nombre": "Dra. Blanc Jorgelina",
+        "matricula": "MP 94687"
+      },
+      {
+        "nombre": "Dr. Cortizo Daniel",
+        "matricula": "MP 111091"
+      },
+      {
+        "nombre": "Dr. De la Cruz Daniel",
+        "matricula": "MP 18320"
+      },
+      {
+        "nombre": "Dr. Devoto Ramiro",
+        "matricula": "MP 114187"
+      },
+      {
+        "nombre": "Dra. Fernandez Raone Paula",
+        "matricula": "MP 94670"
+      },
+      {
+        "nombre": "Dra. Laguna Guillermina",
+        "matricula": "MP 119952"
+      }
+    ]
+  },
+  {
+    "especialidad": "Hematología",
+    "profesionales": [
+      {
+        "nombre": "Dra. Landeyro Verónica",
+        "matricula": "MP 120193"
+      },
+      {
+        "nombre": "Dr. Tarela Mario",
+        "matricula": "MP 112639"
+      }
+    ]
+  },
+  {
+    "especialidad": "Infectología",
+    "profesionales": [
+      {
+        "nombre": "Dra. Pattener Ayelen",
+        "matricula": "MP 82100"
+      }
+    ]
+  },
+  {
+    "especialidad": "Nefrología",
+    "profesionales": [
+      {
+        "nombre": "Dr. Villa Dario",
+        "matricula": "MP 112658"
+      }
+    ]
+  },
+  {
+    "especialidad": "Neumología",
+    "profesionales": [
+      {
+        "nombre": "Dr. Alves Leandro",
+        "matricula": "MP 113613"
+      },
+      {
+        "nombre": "Dr. Lopez Juan",
+        "matricula": "MP 48904"
+      }
+    ]
+  },
+  {
+    "especialidad": "Neurología",
+    "profesionales": [
+      {
+        "nombre": "Dr. Saboredo Leonardo",
+        "matricula": "MP 114084"
+      }
+    ]
+  },
+  {
+    "especialidad": "Neurocirugía",
+    "profesionales": [
+      {
+        "nombre": "Dr. Paleo Jose",
+        "matricula": "MP 116143"
+      }
+    ]
+  },
+  {
+    "especialidad": "Oftalmología",
+    "profesionales": [
+      {
+        "nombre": "Stancatto Fabiana",
+        "matricula": "MP 111935"
+      }
+    ]
+  },
+  {
+    "especialidad": "Otorrinolaringología",
+    "profesionales": [
+      {
+        "nombre": "Dr. Barros Abdala Pablo",
+        "matricula": "MP 120333"
+      },
+      {
+        "nombre": "Dra. Gastañaga Maria",
+        "matricula": "MP 115282"
+      },
+      {
+        "nombre": "Dr. Isla Francisco",
+        "matricula": "MP 17514"
+      }
+    ]
+  },
+  {
+    "especialidad": "Pediatría",
+    "profesionales": [
+      {
+        "nombre": "Dra. Ithaurralde Melissa",
+        "matricula": "MP 120000"
+      },
+      {
+        "nombre": "Dr. Montañez Luciano",
+        "matricula": "MP 120355"
+      },
+      {
+        "nombre": "Dra. Galli Maria Cristina",
+        "matricula": "MP 18548"
+      }
+    ]
+  },
+  {
+    "especialidad": "Reumatología",
+    "profesionales": [
+      {
+        "nombre": "Dra. Sirera Ana",
+        "matricula": "MP 114952"
+      },
+      {
+        "nombre": "Dr. Urrutia Julio",
+        "matricula": "MP 118893"
+      }
+    ]
+  },
+  {
+    "especialidad": "Terapia Ocupacional",
+    "profesionales": [
+      {
+        "nombre": "Dra. De Paz",
+        "matricula": "MP 195"
+      }
+    ]
+  },
+  {
+    "especialidad": "Traumatología",
+    "profesionales": [
+      {
+        "nombre": "Dr. Martiarena Eduardo",
+        "matricula": "MP 19461"
+      },
+      {
+        "nombre": "Dr. Yannone Raul",
+        "matricula": "MP 114464"
+      }
+    ]
+  },
+  {
+    "especialidad": "Urología",
+    "profesionales": [
+      {
+        "nombre": "Dr. Gallardo Jorge",
+        "matricula": "MP 117651"
+      },
+      {
+        "nombre": "Dr. Mejia Higuita Luis",
+        "matricula": "MP 119702"
+      }
+    ]
+  }
+]
