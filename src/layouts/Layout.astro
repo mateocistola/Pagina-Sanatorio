@@ -7,20 +7,35 @@ import WhatsAppButton from '../components/WhatsAppButton.astro';
 
 interface Props {
   title?: string;
+  description?: string; // prop de descripción para Google
 }
 
-const { title = "Sanatorio San José" } = Astro.props;
+const { 
+  title = "Sanatorio San José de Villa Elisa S.A.",
+  description = "Sanatorio San José de Villa Elisa. Atención médica integral, consultorios externos, guardia permanente las 24 hs y autogestión de turnos y estudios médicos digitales."
+} = Astro.props;
 ---
 
 <html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-    <title>{title}</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" /> <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={Astro.url.pathname === '/' ? Astro.site : new URL(Astro.url.pathname, Astro.site)} />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:site_name" content="Sanatorio San José" />
+    <meta property="og:image" content={new URL('/og-image.jpg', Astro.site)} /> 
+    
+    <meta name="generator" content={Astro.generator} />
   </head>
 
-  <body class="bg-white text-gray-800 min-h-screen flex flex-col justify-between antialiased">
+  <body class="bg-white text-gray-800 min-h-screen flex flex-col justify-between antialiased selection:bg-blue-600 selection:text-white">
     
     <Header />
 
@@ -35,15 +50,22 @@ const { title = "Sanatorio San José" } = Astro.props;
     <script>
       import AOS from 'aos';
 
-      // Inicializamos AOS una vez que el DOM esté completamente cargado
-      document.addEventListener('DOMContentLoaded', () => {
+      const initAOS = () => {
         AOS.init({
           duration: 800,
           once: true,
           offset: 50,
-          easing: 'ease-out-cubic' // Le da una curva de velocidad mucho más suave y premium
+          easing: 'ease-out-cubic'
         });
-      });
+      };
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAOS);
+      } else {
+        initAOS();
+      }
+
+      document.addEventListener('astro:page-load', initAOS);
     </script>
   </body>
 </html>
