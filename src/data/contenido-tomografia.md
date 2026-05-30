@@ -9,7 +9,6 @@ estudios:
   - "Ecografías"
   - "Radiografías"
   - "Tomografías Computadas"
-  - "Resonancias Magnéticas"
 beneficios_resonador: "Permite que personas con claustrofobia, obesidad o pacientes que no desean someterse a un tubo cerrado tradicional, puedan realizarse sus resonancias con total tranquilidad, comodidad y sin ninguna complicación."
 ---
 
