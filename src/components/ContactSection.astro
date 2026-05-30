@@ -34,61 +34,73 @@ import { ArrowRight, MapPin, Phone, MessageSquare, Clock } from 'lucide-astro';
         </div>
       </div>
 
-      <!-- Columna Derecha: Tarjeta de Contacto Rápido + Link a Contacto (Ocupa 5 columnas) -->
-      <div class="lg:col-span-5 w-full">
-        <div class="bg-slate-900 text-white rounded-3xl p-8 md:p-10 shadow-xl shadow-slate-900/10 border border-slate-800 relative overflow-hidden group">
-          <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.1),transparent_50%)]"></div>
-          
-          <div class="relative z-10 space-y-6">
-            <div>
-              <h3 class="text-2xl font-bold tracking-tight mb-1.5">Atención Directa</h3>
-              <p class="text-slate-400 text-sm">Canales de comunicación de respuesta inmediata.</p>
+    <!-- Columna Derecha: Tarjeta de Contacto Rápido + Link a Contacto (Ocupa 5 columnas) -->
+    <div class="lg:col-span-5 w-full">
+      <div class="bg-slate-900 text-white rounded-3xl p-8 md:p-10 shadow-xl shadow-slate-900/10 border border-slate-800 relative overflow-hidden group">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(59,130,246,0.1),transparent_50%)]"></div>
+        
+        <div class="relative z-10 space-y-6">
+          <div>
+            <h3 class="text-2xl font-bold tracking-tight mb-1.5">Atención Directa</h3>
+            <p class="text-slate-400 text-sm">Canales de comunicación de respuesta inmediata.</p>
+          </div>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start gap-3.5">
+              <MapPin class="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
+              <p class="text-slate-300 text-sm md:text-base leading-snug">
+                Calle 55 N° 801 e/ 8 y 9, Villa Elisa
+              </p>
             </div>
 
-            <!-- Datos de acceso rápido -->
-            <div class="space-y-4 pt-2">
-              <div class="flex items-start gap-3.5">
-                <MapPin class="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
-                <p class="text-slate-300 text-sm md:text-base leading-snug">
-                  Calle 55 N° 801 e/ 8 y 9, Villa Elisa
-                </p>
-              </div>
-
-              <div class="flex items-center gap-3.5">
-                <Phone class="w-5 h-5 text-blue-400 shrink-0" />
-                <a href="tel:02214730266" class="text-slate-300 text-sm md:text-base hover:text-white hover:underline transition-colors">
-                  (0221) 473-0266
-                </a>
-              </div>
-
-              <div class="flex items-center gap-3.5">
-                <MessageSquare class="w-5 h-5 text-emerald-400 shrink-0" />
-                <a href="https://wa.me/5492215453531" target="_blank" class="text-slate-300 text-sm md:text-base hover:text-white hover:underline transition-colors">
-                  WhatsApp Guardia / Consultas
-                </a>
-              </div>
-
-              <div class="flex items-start gap-3.5">
-                <Clock class="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
-                <p class="text-slate-300 text-xs md:text-sm leading-snug">
-                  Guardia médica permanente las <span class="text-blue-300 font-semibold">24 hs</span>.
-                </p>
-              </div>
-            </div>
-
-            <!-- Botón de acción hacia la página de contacto -->
-            <div class="pt-4 border-t border-slate-800">
-              <a
-                href="/contacto"
-                class="flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-600 text-white w-full py-3.5 rounded-xl font-bold tracking-wide shadow-md transition-all duration-300 active:scale-[0.98]"
-              >
-                Ver mapa y canales de contacto
+            <div class="flex items-center gap-3.5">
+              <Phone class="w-5 h-5 text-blue-400 shrink-0" />
+              <a href="tel:02214730266" class="text-slate-300 text-sm md:text-base hover:text-white hover:underline transition-colors">
+                (0221) 473-0266
               </a>
             </div>
+
+            <div class="flex items-center gap-3.5">
+              <MessageSquare class="w-5 h-5 text-emerald-400 shrink-0" />
+              <a 
+                href="https://wa.me/5492215453531" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                class="text-slate-300 text-sm md:text-base hover:text-white hover:underline transition-colors"
+              >
+                WhatsApp
+              </a>
+            </div>
+
+            <div class="flex items-start gap-3.5">
+              <Clock class="w-5 h-5 text-blue-400 shrink-0 mt-0.5" />
+              <p class="text-slate-300 text-xs md:text-sm leading-snug">
+                Guardia médica permanente las <span class="text-blue-300 font-semibold">24 hs</span>.
+              </p>
+            </div>
+          </div>
+
+          <div class="bg-amber-500/10 border border-amber-500/20 rounded-2xl p-4 flex gap-3">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5 text-amber-400 shrink-0 mt-0.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+            </svg>
+            <div class="space-y-1">
+              <h4 class="text-xs font-bold text-amber-400 uppercase tracking-wider">Aviso importante</h4>
+              <p class="text-slate-300 text-xs leading-relaxed">
+                Desde el Sanatorio <span class="text-white font-medium">nunca</span> solicitaremos transferencias bancarias, pagos por adelantado ni datos de tarjetas de crédito o débito para la gestión de turnos o atención médica.
+              </p>
+            </div>
+          </div>
+
+          <div class="pt-4 border-t border-slate-800">
+            <a
+              href="/contacto"
+              class="flex items-center justify-center gap-2 bg-blue-700 hover:bg-blue-600 text-white w-full py-3.5 rounded-xl font-bold tracking-wide shadow-md transition-all duration-300 active:scale-[0.98]"
+            >
+              Ver mapa y canales de contacto
+            </a>
           </div>
         </div>
       </div>
-
     </div>
-  </div>
 </section>

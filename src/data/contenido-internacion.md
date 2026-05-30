@@ -8,7 +8,7 @@ email: "historiasclinicassanjose@gmail.com"
 
 ## 01. Internación Programada
 
-Es la acordada con el médico tratante, quién junto a Ud. definirá la fecha en la cual realizará la intervención quirúrgica. Siempre y cuando su patología y condición médica así lo permitan. Es importante que usted conozca los pasos que debe tener en cuenta para realizarse una internación programada en el Sanatorio.
+Es la acordada con el médico tratante, quién junto a usted, definirá la fecha en la cual realizará la intervención quirúrgica. Siempre y cuando su patología y condición médica así lo permitan. Es importante que usted conozca los pasos que debe tener en cuenta para realizarse una internación programada en el Sanatorio.
 
 Para ello le pedimos que se contacte con admisión de internaciones al 2214730266 o 2214733433, menú 1, interno 1.
 
@@ -23,15 +23,15 @@ Sugerimos para estos casos consultar previamente la disponibilidad.
 
 ## 02. Internación de Urgencia
 
-En este caso, el paciente es admitido por el Servicio de Guardia y luego de ser asistido por el profesional médico, recibe la indicación de ser internado. Es entonces cuando el familiar/acompañante, o empleados administrativos del Sanatorio, se acercarán a las oficinas de Admisión de Internación con la documentación necesaria y la orden de Internación médica, comenzándose a realizar el trámite de admisión de internación.
+En este caso, el paciente es admitido por el Servicio de Guardia y luego de ser asistido por el profesional médico, recibe la indicación de ser internado. Es entonces cuando el familiar/acompañante, se acercará a las oficinas de Admisión de Internación con la documentación necesaria y la orden de Internación médica, comenzándose a realizar el trámite de admisión de internación.
 
-Donde nuestro personal de admisión le informarán acerca de los requisitos de autorización necesarios, según la cobertura de paciente.
+Donde nuestro personal de admisión le informarán acerca de los requisitos de autorización necesarios, según la cobertura del paciente.
 
 ---
 
 ## 03. Alta médica
 
-Su médico tratante decidirá el día y horario de alta. Dejando registro de dicha orden en su H.C., a partir de esta indicación usted o su acompañante deberá presentar en Admisión donde verificarán su documentación, cerrarán su cuenta y le entregarán el comprobante de Alta Administrativa.
+Su médico tratante decidirá el día y horario de alta. Dejando registro de dicha orden en su H.C., a partir de esta indicación usted o su acompañante deberá presentarse en Admisión donde verificarán su documentación, cerrarán su cuenta y le entregarán el comprobante de Alta Administrativa.
 
 ---
 

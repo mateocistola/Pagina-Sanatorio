@@ -62,78 +62,111 @@
 
   <div
     id="studiesModal"
-    class="fixed inset-0 bg-slate-900/60 backdrop-blur-sm hidden items-center justify-center z-50 p-4 transition-opacity duration-300"
+    class="fixed inset-0 bg-slate-950/40 backdrop-blur-md hidden items-center justify-center z-50 p-4 transition-all duration-300"
   >
-    <div class="bg-white rounded-2xl p-8 w-full max-w-md shadow-2xl border border-slate-100 transform transition-transform duration-300 scale-100">
-
-      <div class="flex items-center justify-between mb-6 pb-4 border-b border-slate-100">
+    <div 
+      class="bg-white rounded-[2rem] p-8 w-full max-w-lg shadow-2xl border border-slate-100/80 transform transition-all duration-300 scale-100 flex flex-col"
+      data-aos="zoom-in-up"
+    >
+      <div class="flex items-start justify-between mb-8">
         <div>
-          <h3 class="text-2xl font-bold text-slate-900">
+          <h3 class="text-3xl font-extrabold text-slate-900 tracking-tight">
             Mis Estudios
           </h3>
-          <p class="text-xs text-slate-400 mt-0.5">Seleccioná el portal correspondiente</p>
+          <p class="text-sm text-slate-500 mt-1">Seleccioná el portal según la especialidad de tu estudio:</p>
         </div>
-
         <button
           id="closeStudiesModal"
-          class="w-8 h-8 rounded-full bg-slate-50 hover:bg-slate-100 text-slate-400 hover:text-slate-800 flex items-center justify-center transition-colors text-xl font-medium"
+          class="w-10 h-10 rounded-full bg-slate-50 hover:bg-red-50 text-slate-400 hover:text-red-500 flex items-center justify-center transition-all duration-200 border border-slate-100 font-semibold"
+          aria-label="Cerrar modal"
         >
           ✕
         </button>
       </div>
 
-      <div class="flex flex-col gap-3.5">
+      <div class="flex flex-col gap-4">
 
         <a
           href="https://estudios.openimage.com.ar/GestionClinicas/portal.jsp"
           target="_blank"
-          class="group flex items-center justify-between bg-blue-600 hover:bg-blue-700 text-white px-5 py-4 rounded-xl font-semibold transition-all shadow-sm hover:shadow-md"
+          rel="noopener noreferrer"
+          class="group flex items-center gap-5 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white p-5 rounded-2xl font-semibold transition-all duration-300 shadow-md hover:shadow-xl hover:-translate-y-0.5"
         >
-          <div class="flex flex-col text-left">
-            <span>Portal Open Image</span>
-            <span class="text-xs font-normal text-blue-200/90">Imágenes y alta complejidad</span>
+          <div class="w-12 h-12 rounded-xl bg-white/15 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-white">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+            </svg>
           </div>
-          <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+          <div class="flex flex-col text-left flex-grow">
+            <span class="text-lg font-bold tracking-wide">Portal Open Image</span>
+            <span class="text-xs font-medium text-blue-100/80 mt-0.5">Radiografías, Tomografías y Resonancias</span>
+          </div>
+          <div class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover:translate-x-1.5 transition-transform shrink-0">
+            <span class="text-lg leading-none">→</span>
+          </div>
         </a>
 
         <a
           href="https://estudios.sanjoseve.com.ar"
           target="_blank"
-          class="group flex items-center justify-between bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-800 px-5 py-4 rounded-xl font-semibold transition-all"
+          rel="noopener noreferrer"
+          class="group flex items-center gap-5 bg-white hover:bg-slate-50 border border-slate-200/80 hover:border-blue-300 text-slate-800 p-5 rounded-2xl font-semibold transition-all duration-300 shadow-sm hover:shadow-lg hover:-translate-y-0.5"
         >
-          <div class="flex flex-col text-left">
-            <span>Estudios Gastro</span>
-            <span class="text-xs font-normal text-slate-400">Gastroenterología</span>
+          <div class="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center shrink-0 group-hover:bg-blue-100 transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h3.75M9 15h3.75M9 18h3.75m3 .75H18a2.25 2.25 0 0 0 2.25-2.25V6.108c0-1.135-.845-2.098-1.976-2.192a48.424 48.424 0 0 0-1.123-.08m-5.801 0c-.065.21-.1.433-.1.664 0 .414.336.75.75.75h4.5a.75.75 0 0 0 .75-.75 2.25 2.25 0 0 0-.1-.664m-5.8 0A2.251 2.251 0 0 1 13.5 2.25H15c1.03 0 1.9.693 2.166 1.638m-7.377 0A48.536 48.536 0 0 1 12 3m0 0c2.917 0 5.747.294 8.5.862m-21 1.083a29.119 29.119 0 0 1 2.583-1.026M4 19.5a.75.75 0 0 0 .75.75h.008a.75.75 0 0 0 .75-.75V15h-1.5v4.5zm0-6h1.5v-3H4v3z" />
+            </svg>
           </div>
-          <span class="text-slate-400 group-hover:text-slate-800 transform group-hover:translate-x-1 transition-transform">→</span>
+          <div class="flex flex-col text-left flex-grow">
+            <span class="text-lg font-bold text-slate-800 group-hover:text-blue-700 transition-colors">Estudios Gastro</span>
+            <span class="text-xs font-normal text-slate-500 mt-0.5">Endoscopías y Gastroenterología</span>
+          </div>
+          <div class="w-8 h-8 rounded-full bg-slate-100 group-hover:bg-blue-50 text-slate-400 group-hover:text-blue-600 flex items-center justify-center group-hover:translate-x-1.5 transition-transform shrink-0">
+            <span class="text-lg leading-none">→</span>
+          </div>
         </a>
 
       </div>
+      
+      <p class="text-center text-xs text-slate-400 mt-6 leading-relaxed">
+        Los datos de acceso fueron provistos al momento de realizar la atención en el sanatorio.
+      </p>
 
     </div>
   </div>
 
-  <script>
+</section>
+
+<script>
+  const runModalLogic = () => {
     const openBtn = document.getElementById('openStudiesModal');
     const modal = document.getElementById('studiesModal');
     const closeBtn = document.getElementById('closeStudiesModal');
 
-    openBtn?.addEventListener('click', () => {
-      modal?.classList.remove('hidden');
-      modal?.classList.add('flex');
+    if (!openBtn || !modal || !closeBtn) return;
+
+    openBtn.addEventListener('click', () => {
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.style.overflow = 'hidden'; // Bloquea el scroll del fondo
     });
 
-    closeBtn?.addEventListener('click', () => {
-      modal?.classList.add('hidden');
-      modal?.classList.remove('flex');
-    });
+    const closeModal = () => {
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.style.overflow = ''; // Libera el scroll
+    };
 
-    modal?.addEventListener('click', (e) => {
+    closeBtn.addEventListener('click', closeModal);
+
+    modal.addEventListener('click', (e) => {
       if (e.target === modal) {
-        modal.classList.add('hidden');
-        modal.classList.remove('flex');
+        closeModal();
       }
     });
-  </script>
+  };
 
-</section>
+  // Corre en carga inicial y con ViewTransitions de Astro
+  runModalLogic();
+  document.addEventListener('astro:page-load', runModalLogic);
+</script>
